@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1126.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+    <children>
+        <AnchorPane layoutX="5.0" layoutY="6.0" prefHeight="567.0" prefWidth="1115.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+            <children>
+                <Label layoutX="52.0" layoutY="33.0" prefHeight="35.0" prefWidth="380.0" text="Customer Form">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="customerTable" layoutX="437.0" layoutY="30.0" prefHeight="456.0" prefWidth="664.0">
+                    <columns>
+                        <TableColumn fx:id="customerID" prefWidth="39.0" text="ID" />
+                  <TableColumn fx:id="customerName" prefWidth="105.0" text="Name" />
+                  <TableColumn fx:id="customerAddress" prefWidth="112.0" text="Address" />
+                  <TableColumn fx:id="customerZIP" prefWidth="74.0" text="ZIP Code" />
+                  <TableColumn fx:id="customerPhone" prefWidth="104.0" text="Phone" />
+                  <TableColumn fx:id="customerCountry" prefWidth="90.0" text="Country" />
+                  <TableColumn fx:id="customerFirstLevelDiv" prefWidth="139.0" text="First Level Division" />
+                    </columns>
+                </TableView>
+                <Button layoutX="437.0" layoutY="497.0" mnemonicParsing="false" onAction="#selectHandler" prefHeight="42.0" prefWidth="247.0" text="Select Customer">
+                    <font>
+                        <Font name="System Bold" size="11.0" />
+                    </font></Button>
+                <Button layoutX="31.0" layoutY="497.0" mnemonicParsing="false" onAction="#cancelHandler" prefHeight="42.0" prefWidth="380.0" text="Cancel">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="31.0" layoutY="443.0" mnemonicParsing="false" onAction="#addHandler" prefHeight="42.0" prefWidth="119.0" text="Add">
+                    <font>
+                        <Font name="System Bold" size="11.0" />
+                    </font>
+                </Button>
+                <Button layoutX="162.0" layoutY="443.0" mnemonicParsing="false" onAction="#modifyHandler" prefHeight="42.0" prefWidth="119.0" text="Modify">
+                    <font>
+                        <Font name="System Bold" size="11.0" />
+                    </font>
+                </Button>
+                <Button layoutX="292.0" layoutY="443.0" mnemonicParsing="false" onAction="#deleteHandler" prefHeight="42.0" prefWidth="119.0" text="Delete">
+                    <font>
+                        <Font name="System Bold" size="11.0" />
+                    </font>
+                </Button>
+            <TextField fx:id="idField" disable="true" layoutX="188.0" layoutY="110.0" prefHeight="25.0" prefWidth="224.0" text="Disabled - Auto Gen ID" />
+            <Button layoutX="854.0" layoutY="497.0" mnemonicParsing="false" onAction="#clearSelectionHandler" prefHeight="42.0" prefWidth="247.0" text="Clear Selection">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Button>
+            <Label layoutX="60.0" layoutY="112.0" text="ID">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameField" layoutX="188.0" layoutY="143.0" prefHeight="25.0" prefWidth="224.0" />
+            <Label layoutX="60.0" layoutY="145.0" text="Name">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="addressField" layoutX="188.0" layoutY="177.0" prefHeight="25.0" prefWidth="224.0" />
+            <Label layoutX="60.0" layoutY="179.0" text="Address">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="zipField" layoutX="188.0" layoutY="210.0" prefHeight="25.0" prefWidth="224.0" />
+            <Label layoutX="60.0" layoutY="212.0" text="ZIP">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="phoneField" layoutX="188.0" layoutY="244.0" prefHeight="25.0" prefWidth="224.0" />
+            <Label layoutX="60.0" layoutY="246.0" text="Phone">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="countryCombo" layoutX="189.0" layoutY="281.0" onAction="#countryChangeHandler" prefHeight="25.0" prefWidth="224.0" />
+            <Label layoutX="59.0" layoutY="283.0" text="Country">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="firstLevelDivCombo" layoutX="206.0" layoutY="318.0" prefHeight="25.0" prefWidth="207.0" />
+            <Label layoutX="59.0" layoutY="320.0" text="First Level Division">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
